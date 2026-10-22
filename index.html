@@ -1,34 +1,8 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18357453230"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18357453230');
-    </script>
-
-    <!-- Event snippet für Conversion "Klick auf ausgehenden Link" (3)
-Fügen Sie das Snippet in Ihre HTML-Seite ein und rufen Sie gtag_report_conversion auf, wenn jemand auf den gewünschten Link oder Button klickt. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18357453230/Ign2CPCt-ZgdEK6DwrFE',
-      'value': 1.0,
-      'currency': 'CNY',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+ 
+   <script src="https://api.yad920d.site/js/meetu-sdk.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
@@ -417,8 +391,8 @@ function gtag_report_conversion(url) {
         // Wichtig: Der Sprung muss synchron gtag_report_conversion auslösen
         function claimReport() {
             closeDiagnosisForm();
-            const url = diagnosisTargetUrl || 'https://linesapp.cc/ydgg02';
-            gtag_report_conversion(url);
+            MeetU.download(event);
+           // gtag_report_conversion(url);
         }
 
         document.addEventListener('keydown', function (e) {
